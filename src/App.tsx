@@ -1,16 +1,17 @@
 import Todos from "./components/Todos";
-
-const items = [
-  "book",
-  "another book",
-  "guess what? another book",
-  "you guessed it, another book",
-];
+import Todo from "./models/todo";
 
 function App() {
+  const todos = [
+    new Todo("book"),
+    new Todo("another book"),
+    new Todo("guess what? another book"),
+    new Todo("you guessed it, another book"),
+  ];
+
   return (
     <div>
-      <Todos items={items} />
+      <Todos items={todos} />
     </div>
   );
 }
